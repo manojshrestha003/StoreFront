@@ -1,35 +1,57 @@
-## StoreFront
-## Getting Started
+# Store – Mini Storefront
 
-First, run the development server:
+A small storefront application built with **Next.js (App Router)**, **Tailwind CSS**, and **Context API**.  
+It fetches product data from the [FakeStore API](https://fakestoreapi.com/) and provides a simple shopping cart experience.  
 
+---
+
+##  How to Run the Project
+
+### 1. Clone the repository
 ```bash
+git clone https://github.com/your-username/mystore.git
+cd mystore
+
+2. Install dependencies
+npm install
+
+3. Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+
+App will be available at:
+ http://localhost:3000
+
+
 ```
+## Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Framework: Next.js (App Router)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Styling: Tailwind CSS
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+State Management: React Context API
 
-## Learn More
+Data Source: FakeStore API
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Data Flow
+Products are fetched from the FakeStore API (/products) on the homepage.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Displayed in a grid with image, title, price, category.
 
-## Deploy on Vercel
+CartContext stores items in global state.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Navbar shows total cart count.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Clicking Add to Cart updates global state → cart page.
+
+
+## Trade-offs / Known Issues
+No backend 
+
+Limited filtering – only category & sort implemented (no advanced filters).
+
+API dependency – if FakeStore API is down, products won’t load.
+
+Basic error handling – only shows error text for API failure.

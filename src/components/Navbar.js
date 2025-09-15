@@ -13,12 +13,12 @@ export default function Navbar() {
     <nav className="bg-gray-500 text-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+          
           <Link
             href="/"
             className="text-2xl font-bold tracking-tight hover:text-blue-200 transition"
           >
-            MyStore
+            Store 
           </Link>
 
           {/* Hamburger Button (Mobile) */}
@@ -49,7 +49,7 @@ export default function Navbar() {
             )}
           </button>
 
-          {/* Links (Desktop) */}
+          {/* Links Desktop*/}
           <div className="hidden sm:flex items-center space-x-6">
             <Link
               href="/"

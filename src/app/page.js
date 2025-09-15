@@ -28,7 +28,7 @@ export default function HomePage() {
       .finally(() => setLoading(false));
   }, []);
 
-  // Apply filters/search/sort
+  // Apply filter search and sort 
   useEffect(() => {
     let filtered = [...products];
     if (search) {

@@ -14,7 +14,7 @@ export default function CartPage() {
 
   return (
     <div className="p-6 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6 text-color">Your Cart</h1>
+      <h1 className="text-3xl font-bold mb-6 text-color">Your Cart </h1>
       <div className="space-y-4">
         {cart.map((item) => (
           <div
@@ -32,7 +32,7 @@ export default function CartPage() {
               </p>
               <p className="text-green-600 font-medium">${item.price}</p>
               <div className="mt-2 flex items-center gap-2">
-                <label className="text-sm text-gray-600">Qty:</label>
+                <label className="text-sm text-gray-600">Quantity:</label>
                 <input
                   type="number"
                   min="1"
