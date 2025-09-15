@@ -5,6 +5,7 @@ import ProductCard from "../components/ProductCard";
 import Filters from "../components/Filters";
 import SearchBar from "../components/SearchBar";
 import SortDropdown from "../components/SortDropdown";
+import SkeletonCard from "@/components/SkeletonCard";
 
 export default function HomePage() {
   const [products, setProducts] = useState([]);
@@ -44,7 +45,7 @@ export default function HomePage() {
   }, [search, category, sort, products]);
 
   if (loading)
-    return <p className="text-center text-gray-500 text-lg mt-10">Loading...</p>;
+    return <SkeletonCard/>
   if (error)
     return <p className="text-center text-red-500 text-lg mt-10">{error}</p>;
 

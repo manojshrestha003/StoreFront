@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useCart } from "../context/CartContext";
+import ThemeToggle from "./ThemeToggle";
 
 
 export default function Navbar() {
@@ -36,7 +37,9 @@ export default function Navbar() {
                 </span>
               )}
             </Link>
+            <ThemeToggle/>
           </div>
+          
         </div>
       </div>
     </nav>
