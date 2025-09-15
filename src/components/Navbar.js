@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
 import ThemeToggle from "./ThemeToggle";
+import Image from "next/image";
 
 export default function Navbar() {
   const { cart } = useCart();
@@ -62,7 +63,7 @@ export default function Navbar() {
               href="/cart"
               className="relative flex items-center text-white hover:text-blue-200 transition font-medium"
             >
-              <img src="assets/CartIcon.png" alt="Cart" className="h-6 w-6" />
+              <Image src="/assets/cartIcon.png" alt="Cart" width={24} height={24} />
               {totalItems > 0 && (
                 <span className="absolute -top-2 -right-3 bg-red-500 text-xs font-bold rounded-full px-2 py-0.5 animate-pulse shadow-lg">
                   {totalItems}

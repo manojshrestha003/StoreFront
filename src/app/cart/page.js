@@ -1,4 +1,3 @@
-
 "use client";
 import { useCart } from "../../context/CartContext";
 
@@ -13,26 +12,32 @@ export default function CartPage() {
     );
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6 text-color">Your Cart </h1>
+    <div className="p-4 sm:p-6 max-w-4xl mx-auto">
+      <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-color text-center sm:text-left">
+        Your Cart
+      </h1>
+
       <div className="space-y-4">
         {cart.map((item) => (
           <div
             key={item.id}
-            className="flex items-center gap-6 border card rounded-lg p-4 shadow-sm hover:shadow-md transition"
+            className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 border card rounded-lg p-4 shadow-sm hover:shadow-md transition"
           >
+            {/* Product Image */}
             <img
               src={item.image}
               alt={item.title}
-              className="h-20 w-20 object-contain rounded bg-white"
+              className="h-24 w-24 sm:h-20 sm:w-20 object-contain rounded bg-white mx-auto sm:mx-0"
             />
-            <div className="flex-1">
+
+            {/* Product Details */}
+            <div className="flex-1 text-center sm:text-left">
               <p className="font-semibold text-color line-clamp-1">
                 {item.title}
               </p>
               <p className="text-green-600 font-medium">${item.price}</p>
-              <div className="mt-2 flex items-center gap-2">
-                <label className="text-sm text-gray-600">Quantity:</label>
+              <div className="mt-2 flex justify-center sm:justify-start items-center gap-2">
+                <label className="text-sm text-gray-600">Qty:</label>
                 <input
                   type="number"
                   min="1"
@@ -42,11 +47,12 @@ export default function CartPage() {
                 />
               </div>
             </div>
-            <div className="text-right">
-             
+
+            {/* Remove Button */}
+            <div className="text-center sm:text-right">
               <button
                 onClick={() => removeFromCart(item.id)}
-                className="mt-2 cursor-pointer btn text-sm font-medium"
+                className="mt-2 cursor-pointer btn text-sm font-medium w-full sm:w-auto"
               >
                 Remove
               </button>
@@ -56,11 +62,12 @@ export default function CartPage() {
       </div>
 
       {/* Summary Section */}
-      <div className="mt-8 p-6 card shadow-sm text-right">
-        <p className="text-2xl font-bold text-color">
-          Total: <span className="text-green-600">${total.toFixed(2)}</span>
+      <div className="mt-8 p-4 sm:p-6 card shadow-sm text-center sm:text-right">
+        <p className="text-xl sm:text-2xl font-bold text-color">
+          Total:{" "}
+          <span className="text-green-600">${total.toFixed(2)}</span>
         </p>
-        <button className="mt-4 px-6 py-3 cursor-pointer  btn text-white font-semibold rounded-lg shadow-md transition">
+        <button className="mt-4 w-full sm:w-auto px-6 py-3 cursor-pointer btn text-white font-semibold rounded-lg shadow-md transition">
           Proceed to Checkout
         </button>
       </div>
