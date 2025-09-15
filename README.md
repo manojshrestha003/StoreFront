@@ -7,10 +7,12 @@ It fetches product data from the [FakeStore API](https://fakestoreapi.com/) and 
 
 ##  How to Run the Project
 
-### 1. Clone the repository
+### 
+
 ```bash
-git clone https://github.com/your-username/mystore.git
-cd mystore
+1. Clone the repository
+git clone https://github.com/manojshrestha003/StoreFront.git
+cd StoreFront
 
 2. Install dependencies
 npm install
