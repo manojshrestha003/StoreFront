@@ -10,7 +10,7 @@ export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
   // Load from localStorage
-  // Because we donot  have backend 
+  
   useEffect(() => {
     const saved = localStorage.getItem("cart");
     if (saved) setCart(JSON.parse(saved));
