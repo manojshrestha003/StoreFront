@@ -14,7 +14,7 @@ It fetches product data from the [FakeStore API](https://fakestoreapi.com/) and 
 git clone https://github.com/manojshrestha003/StoreFront.git
 cd StoreFront
 
-2. Install dependencies
+2. Install dependenciess
 npm install
 
 3. Run development server
