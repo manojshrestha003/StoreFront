@@ -61,5 +61,5 @@ Basic error handling – only shows error text for API failure.
 
 ## Task live at 
 ```bash
- https://store-front-git-main-manojshrestha003s-projects.vercel.app/
+ https://store-front-theta-flax.vercel.app/
  ```
