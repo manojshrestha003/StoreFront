@@ -57,3 +57,9 @@ Limited filtering – only category & sort implemented (no advanced filters).
 API dependency – if FakeStore API is down, products won’t load.
 
 Basic error handling – only shows error text for API failure.
+
+
+## Task live at 
+```bash
+ https://vercel.com/manojshrestha003s-projects/store-front/sq24vYkoDpo8RAhMZi6FukiBXvkg
+ ```
