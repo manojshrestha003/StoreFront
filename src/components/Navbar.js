@@ -60,32 +60,31 @@ export default function Navbar() {
             </Link>
 
            <Link
-  href="/cart"
-  className="relative flex items-center text-white hover:text-blue-200 transition font-medium"
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.6"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    aria-hidden="true"
-  >
-    <path d="M3 3h2l.9 2M7 13h10l3-7H8.1" />
-    <circle cx="10" cy="19" r="1.5" />
-    <circle cx="18" cy="19" r="1.5" />
-  </svg>
+               href="/cart"
+                   className="relative flex items-center text-white hover:text-blue-200 transition font-medium">
+                    <svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                      >
+                      <path d="M3 3h2l.9 2M7 13h10l3-7H8.1" />
+                      <circle cx="10" cy="19" r="1.5" />
+                     <circle cx="18" cy="19" r="1.5" />
+                     </svg>
 
-  {totalItems > 0 && (
-    <span className="absolute -top-2 -right-3 bg-red-500 text-xs font-bold rounded-full px-2 py-0.5 animate-pulse shadow-lg">
-      {totalItems}
-    </span>
-  )}
-</Link>
+                     {totalItems > 0 && (
+                     <span className="absolute -top-2 -right-3 bg-red-500 text-xs font-bold rounded-full px-2 py-0.5 animate-pulse shadow-lg">
+                      {totalItems}
+                     </span>
+                )}
+                 </Link>
 
             <ThemeToggle />
           </div>
@@ -103,11 +102,8 @@ export default function Navbar() {
             Home
           </Link>
 
-         <Link
-  href="/cart"
-  className="relative flex items-center text-white hover:text-blue-200 transition font-medium"
->
-  <svg
+         <Link href="/cart" className="relative flex items-center text-white hover:text-blue-200 transition font-medium">
+         <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"

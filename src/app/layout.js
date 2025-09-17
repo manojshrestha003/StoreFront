@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "StoreFront",
   description: "StoreFront is a simple and modern e-commerce website where you can explore and buy products easily.",
+  keywords: "e-commerce, online shopping, products, StoreFront"
 };
 
 export default function RootLayout({ children }) {
